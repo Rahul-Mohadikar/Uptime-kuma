@@ -46,7 +46,7 @@ pipeline{
         }
        stage('TRIVY FS SCAN') {
             steps {
-                sh "trivy fs . &gt; trivyfs.json"
+                sh "trivy fs . > trivyfs.json"
             }
         }
         stage("docker build & push"){
